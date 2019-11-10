@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="./main.css" />
 		<title>Snake</title>
 		<style type="text/css">
 			body {
@@ -23,7 +24,7 @@
 			 * Copyright (c) 2011, Robert Eisele (robert@xarg.org)
 			 * Dual licensed under the MIT or GPL Version 2 licenses.
 			 **/
-			function init() {
+			function startGame() {
 
 				var ctx;
 				var turn  = [];
@@ -187,7 +188,8 @@
 		</script>
 	</head>
 
-	<body onload="init()">
+	<body class="gameBody" onload="startGame()">
+		<a href="./index.html">Home</a>
 		<h1>Snake</h1>
 	</body>
 </html>
