@@ -6,7 +6,6 @@
 		<title>Dodge</title>
 		<script>
 			// CREDIT: https://www.w3schools.com/graphics/game_intro.asp
-
 			var myGamePiece;
 			var myObstacles = [];
 			var myScore;
@@ -15,12 +14,16 @@
 			    myGamePiece = new component(30, 30, "red", 10, 120);
 			    myGamePiece.gravity = 0.05;
 			    myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+
 			    myGameArea.start();
+				myGameArea.canvas.addEventListener('click', function(evt) { // No right click
+					myGamePiece.gravitySpeed += -2;
+				});
 			}
 
 			var myGameArea = {
-			    canvas : document.createElement("canvas"),
-			    start : function() {
+			    canvas: document.createElement("canvas"),
+			    start: function() {
 			        this.canvas.width = 480;
 			        this.canvas.height = 270;
 			        this.context = this.canvas.getContext("2d");
