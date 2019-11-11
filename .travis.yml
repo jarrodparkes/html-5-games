@@ -6,6 +6,6 @@ install:
 before_script:
   - yarn global add @vue/cli
 script:
-  - npm run build -- --prod
+  - npm run build
 after_success:
   - firebase deploy --project games-2b64c --token $FIREBASE_TOKEN
